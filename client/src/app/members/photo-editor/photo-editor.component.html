@@ -6,12 +6,12 @@
                 type="button"
                 [ngClass]="photo.isMain ? 'btn-success active' : 'btn-outline-success'"
                 (click)="setMainPhoto(photo)"
-                [disabled]="(photo?.isMain)"
+                [disabled]="(photo.isMain)"
                 class="btn btn-sm mr-1"
             >{{photo.isMain}}</button>
             <button 
             class="btn-danger btn-sm"
-            [disabled]="(!photo?.isMain)"
+            [disabled]="(photo?.isMain)"
             (click)="deletePhoto(photo.id)"
             ><i class="fa fa-trash"></i></button>
         </div>
